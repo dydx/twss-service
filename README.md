@@ -4,9 +4,9 @@ A simple Restify service built using Daniel Rapp's [twss.js](https://github.com/
 
 # Installation and Usage
 
-Just `git clone https://github.com/dydx/twss-service`
-Then `npm install`
-Finally `node index.js`
+* Just `git clone https://github.com/dydx/twss-service`
+* Then `npm install`
+* Finally `node index.js`
 
 ## requests
 
