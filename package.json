@@ -1,0 +1,30 @@
+{
+  "name": "twss-service",
+  "version": "0.1.0",
+  "description": "TWSS microservice",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dydx/twss-service.git"
+  },
+  "keywords": [
+    "twss",
+    "service"
+  ],
+  "author": "Josh Sandlin <joshua.sandlin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dydx/twss-service/issues"
+  },
+  "homepage": "https://github.com/dydx/twss-service#readme",
+  "dependencies": {
+    "restify": "^3.0.3",
+    "twss": "^0.1.6"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0"
+  }
+}
