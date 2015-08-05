@@ -7,6 +7,14 @@ var server = restify.createServer({
 
 server.use(restify.bodyParser());
 
+server.use(
+    function crossOrigin(req, res, next) {
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Header", "X-Requested-With");
+        return next();
+    }
+);
+
 /**
  * Our predicate function, determines if given phrase
  * is TWSS or not
