@@ -1,12 +1,17 @@
 var restify = require('restify');
 var twss = require('twss');
 
+// some set up for the twss module
+twss.algo = 'nbc';
+twss.threshold = 0.92; // this is crazy high..
+
 var server = restify.createServer({
     // config stuff
 });
 
 server.use(restify.bodyParser());
 
+// CORS support
 server.use(
     function crossOrigin(req, res, next) {
         res.header("Access-Control-Allow-Origin", "*");
