@@ -37,13 +37,17 @@ function is_that_what_she_said_p(parser, phrase) {
 }
 
 function responder(req, res, next) {
-    var phrase = req.body.phrase;
+    var phrase = req.body;
     // we are dependency injecting the twss module
     // in case we want to replace it later
     var response = is_that_what_she_said_p(twss, phrase);
+
     console.log('-> parsing request for "%s"', phrase);
+    
     res.send({phrase: phrase, is_twss: response});
+    
     console.log('-> response sent');
+    
     return next();
 }
 
@@ -62,6 +66,7 @@ server.post('/api', responder);
  * @params {number} port Port that our server is running on
  * @params {function} callback A function to run when the server starts
  */
-server.listen(8000, function() {
+var port = process.env.PORT || 8000
+server.listen(port, function() {
     console.log('**** %s listening on %s ****', server.name, server.url);
 });
